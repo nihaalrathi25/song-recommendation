@@ -1,0 +1,107 @@
+/* face.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form-switch {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-switch input {
+    display: none;
+}
+
+.form-switch i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.form-switch input:checked + i {
+    background-color: #007bff;
+}
+
+.form-switch i::before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    top: 2px;
+    left: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.form-switch input:checked + i::before {
+    transform: translateX(20px);
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#webcam {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: .25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+}
+
+@-webkit-keyframes spinner-border {
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spinner-border {
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+#emotion {
+    margin-top: 10px;
+}
+
+#playlist {
+    margin-top: 10px;
+}
+
+.alert-danger {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
